@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: activemq
+  namespace: karen-dev
+  labels:
+    app: activemq
+spec:
+  containers:
+  - name: activemq
+    image: kcaraujo/activemq

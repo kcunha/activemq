@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: activemq
+  namespace: karen-dev
+  labels:
+    app: activemq
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: activemq
+  template:
+      metadata:
+        labels:
+          app: activemq
+      spec:
+        containers:
+          - name: activemq
+            image: activemq:latest
+            imagePullPolicy: Never
+            ports:
+              - containerPort: 8161
+                name: http
+              - containerPort: 61616
+                name: tcp
