@@ -7,4 +7,4 @@ minikube -p karen.dev start
 kubectl apply -f activemq-deployment.yaml
 
 #3
-kubectl apply –f k8s-activemq-service.yml
+kubectl apply –f activemq-service.yml
